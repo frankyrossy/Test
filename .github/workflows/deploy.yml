@@ -1,0 +1,35 @@
+name: Deploy to Firebase
+on:
+  push:
+    branches: [main]  # Wird bei jedem Push zum "main"-Branch ausgelöst
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: |
+          cd krankenfahrten
+          npm install
+
+      - name: Build Project
+        run: |
+          cd krankenfahrten
+          npm run build
+          cp -r build/* ../public/
+
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0.7.0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          channelId: live
+          projectId: ${{ secrets.FIREBASE_PROJECT_ID }}

@@ -1,0 +1,11 @@
+{
+  "name": "krankenfahrten",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "firebase serve",
+    "deploy": "firebase deploy"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.0.0"
+  }
+}
