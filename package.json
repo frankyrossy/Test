@@ -13,6 +13,8 @@
     "firebase-tools": "^13.0.0"
   },
   "dependencies": {
+    "@mui/x-date-pickers": "^7.28.0",
+    "dayjs": "^1.11.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.4.0",
