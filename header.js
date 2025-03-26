@@ -44,6 +44,6 @@ function createHeader() {
 document.addEventListener('DOMContentLoaded', function() {
   const headerContainer = document.getElementById('header-container');
   if (headerContainer) {
-    headerContainer.appendChild(createHeader());
+    headerContainer.innerHTML = '<header>...</header>';
   }
 });
