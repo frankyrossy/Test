@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fahrdienst Richter</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/header.js"></script>
 </head>
 <body>
-    <!-- Container für den Header -->
-    <div id="header-container"></div>
-    
-    <!-- Hauptinhalt der Seite -->
-    <main>
-        <!-- Hier kommt der Seiteninhalt -->
-    </main>
-    
-    <!-- Container für den Footer -->
-    <div id="footer-container"></div>
-    
-    <!-- JavaScript einbinden -->
-    <script src="header.js"></script>
-    <script src="footer.js"></script>
+    <div id="app">
+        <!-- Container für den Header -->
+        <div id="header-container"></div>
+        
+        <!-- Hauptinhalt der Seite -->
+        <main>
+            <!-- Hier kommt der Seiteninhalt -->
+        </main>
+        
+        <!-- Container für den Footer -->
+        <div id="footer-container"></div>
+        
+        <!-- JavaScript einbinden -->
+        <script src="header.js"></script>
+        <script src="footer.js"></script>
+        <script>
+            // Hier wird die Funktion verwendet
+            const appContainer = document.getElementById('app');
+            createHeader(appContainer, {
+                title: 'Fahrdienst Richter',
+                showNavigation: true
+            });
+        </script>
+    </div>
 </body>
 </html>
