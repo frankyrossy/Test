@@ -72,10 +72,16 @@ const Home = () => {
 };
 
 // Render die Komponente
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>
-);
+'use strict';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function App() {
+    return React.createElement('div', null, 
+        React.createElement('h1', null, 'Willkommen bei der Krankentransport Terminbuchung')
+    );
+}
+
+root.render(React.createElement(App));
 
 export default Home;
