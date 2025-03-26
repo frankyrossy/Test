@@ -1,0 +1,11 @@
+# Korrekten MIME-Typ für CSS setzen
+<IfModule mod_mime.c>
+    AddType text/css .css
+</IfModule>
+
+# Aktivieren Sie gzip-Kompression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE text/html
+</IfModule>
