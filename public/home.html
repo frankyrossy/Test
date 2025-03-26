@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krankentransport Terminbuchung</title>
-    
-    <!-- React -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    
-    <!-- Material-UI -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <script src="https://unpkg.com/@mui/material@5.14.7/umd/material-ui.development.js"></script>
-    
-    <!-- DatePicker -->
+    <title>Fahrdienst Richter</title>
+    <!-- React und ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel für JSX-Transpilation -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- MUI Core -->
+    <script src="https://unpkg.com/@emotion/react@11.11.1/dist/emotion-react.umd.min.js"></script>
+    <script src="https://unpkg.com/@emotion/styled@11.11.0/dist/styled.umd.min.js"></script>
+    <script src="https://unpkg.com/@mui/material@5.14.20/umd/material-ui.development.js"></script>
+    <!-- MUI X Date Pickers -->
     <script src="https://unpkg.com/@mui/x-date-pickers@6.11.2/dist/umd/x-date-pickers.development.js"></script>
-    <script src="https://unpkg.com/dayjs@1.11.9/dayjs.min.js"></script>
+    <!-- DayJS Adapter -->
+    <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
 </head>
 <body>
     <div id="root"></div>
-    <script src="home.js"></script>
+    <!-- Eigenes Script mit Babel-Typ -->
+    <script type="text/babel" src="home.js"></script>
 </body>
 </html>

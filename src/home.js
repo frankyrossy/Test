@@ -1,16 +1,18 @@
-import React from 'react';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+const { React, ReactDOM } = window;
+const MaterialUI = window['MaterialUI'];
+const MuiXDatePickers = window['MuiXDatePickers'];
+const dayjs = window.dayjs;
 
-// ...existing code...
+const { LocalizationProvider, DateCalendar } = MuiXDatePickers;
+const AdapterDayjs = MuiXDatePickers.AdapterDayjs;
 
-function Home() {
-  return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker />
-    </LocalizationProvider>
-  );
+function App() {
+    return (
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DateCalendar />
+        </LocalizationProvider>
+    );
 }
 
-// ...existing code...
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
